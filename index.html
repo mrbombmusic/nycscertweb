@@ -5,6 +5,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/addons/p5.sound.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tone@14.7.39/build/Tone.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
 
@@ -30,16 +31,15 @@
           </ul>
 
           <p> Here is the result of the live coding lesson... </p>
-
-          <!-- <p> Here is just something Ive done on my own time
-            that I included to test out using Javascript.
-           </p> -->
            <script src="ball.js"></script>
-     <!-- <script src="pendulum.js"></script> -->
-    <!-- <script src="sketch.js"></script> -->
-    <!-- <div id="ball"></div>
-    <script>
-      var myp5 = new p5(sketchTest, "ball" );
-    </script>
-  </body> -->
+
+           <button id = "play" onclick="playTone()">PLAY</button>
+           <script>
+             function playTone() {
+             const synth = new Tone.Synth().toDestination();
+
+             synth.triggerAttackRelease("C4", "8n");
+           }
+           </script>
+
 </html>
