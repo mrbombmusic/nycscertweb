@@ -12,7 +12,7 @@
   </head>
   <body>
     <h1>Liam Baum CS Certification Portfolio</h1>
-    <p> Here are some things that I have done in class</p>
+    <p> Here are some things that I have done in class: </p>
 
     <h2>Programming in a High Level Language</h2>
       <ul>
@@ -32,17 +32,5 @@
 
           <p> Here is the result of the live coding lesson... </p>
            <script src="ball.js"></script>
-
-           <button id = "play" onclick="playTone()">PLAY</button>
-           <script>
-             const synth = new Tone.Synth().toDestination();
-             function playTone() {
-               document.getElementById("play").onclick = async () => {
-                 await Tone.start();
-
-                 synth.triggerAttackRelease("C4", "8n");
-               }
-           }
-           </script>
 
 </html>
