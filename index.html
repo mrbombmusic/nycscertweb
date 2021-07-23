@@ -35,11 +35,11 @@
 
            <button id = "play" onclick="playTone()">PLAY</button>
            <script>
+             const synth = new Tone.Synth().toDestination();
              function playTone() {
-               const synth = new Tone.Synth().toDestination();
                document.getElementById("play").onclick = async () => {
                  await Tone.start();
-                 
+
                  synth.triggerAttackRelease("C4", "8n");
                }
            }
